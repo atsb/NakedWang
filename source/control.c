@@ -224,7 +224,6 @@ void CONTROL_ClearAssignments( void )
 
 void CONTROL_GetUserInput( UserInput *info )
 {
-    STUBBED("GetUserInput")  // this function may be totally wrong.  --ryan.
     info->button0 = info->button1 = FALSE;
     info->dir = dir_None;
 

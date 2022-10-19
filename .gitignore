@@ -13,3 +13,11 @@
 *.recipe
 *.tlog
 *.user
+*.bak
+*.db-shm
+*.db-wal
+*.opendb
+source/.vs/sw/v17/.suo
+*.ilk
+source/DebugVC7/Sw.log
+*.log

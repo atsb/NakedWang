@@ -1401,7 +1401,7 @@ DoSpawnTeleporterEffectPlace(SPRITEp sp)
     long nx, ny;
     SPRITEp ep;
 
-    effect = SpawnSprite(STAT_MISSILE, NULL, s_TeleportEffect, sp->sectnum,
+    effect = SpawnSprite(STAT_MISSILE, 0, s_TeleportEffect, sp->sectnum,
         sp->x, sp->y, SPRITEp_TOS(sp) + Z(16), 
         sp->ang, 0);
 
@@ -4782,11 +4782,11 @@ GetOverlapSector(long x, long y, short *over, short *under)
     if (!found)
         {
         TerminateGame();
-        printf("GetOverlapSector x = %d, y = %d, over %d, under %d", x, y, *over, *under);
+        printf("GetOverlapSector x = %ld, y = %ld, over %ld, under %ld", x, y, *over, *under);
         exit(0);
         }
     
-    PRODUCTION_ASSERT(found != NULL);
+    PRODUCTION_ASSERT(found != 0);
     PRODUCTION_ASSERT(found <= 2);
 
     // the are overlaping - check the z coord
@@ -4911,7 +4911,7 @@ DoPlayerWarpToUnderwater(PLAYERp pp)
     SPRITEp sp = &sprite[pp->PlayerSprite];
     short i, nexti;
     SECT_USERp sectu = SectUser[pp->cursectnum];
-    SPRITEp under_sp, over_sp;
+    SPRITEp under_sp = NULL, over_sp = NULL;
     char Found = FALSE;
     short over, under;
     
@@ -4989,7 +4989,7 @@ DoPlayerWarpToSurface(PLAYERp pp)
     SECT_USERp sectu = SectUser[pp->cursectnum];
     short over, under;
 
-    SPRITEp under_sp, over_sp;
+    SPRITEp under_sp = NULL, over_sp = NULL;
     char Found = FALSE;
     
     if (Prediction)
@@ -5466,7 +5466,7 @@ DoPlayerDive(PLAYERp pp)
    // if((RANDOM_RANGE(1000<<5)>>5) < 100)
    //     PlaySound(DIGI_BUBBLES, &pp->posx, &pp->posy, &pp->posz, v3df_dontpan|v3df_follow);
     
-    if (!Prediction && pp->z_speed && ((RANDOM_P2(1024<<5)>>5) < 64) ||
+    if ((!Prediction && pp->z_speed && ((RANDOM_P2(1024<<5)>>5) < 64)) ||
         (PLAYER_MOVING(pp) && (RANDOM_P2(1024<<5)>>5) < 64))
         {
         short bubble;
@@ -6660,7 +6660,7 @@ DoPlayerBeginDie(PLAYERp pp)
     pp->slide_xvect = pp->slide_yvect = 0;
     pp->floor_dist = PLAYER_WADE_FLOOR_DIST;
     pp->ceiling_dist = PLAYER_WADE_CEILING_DIST;
-    ASSERT(pp->DeathType < SIZ(PlayerDeathFunc))
+    ASSERT(pp->DeathType < SIZ(PlayerDeathFunc));
     pp->DoPlayerAction = PlayerDeathFunc[pp->DeathType];
     pp->sop_control = NULL;
     pp->sop_remote = NULL;

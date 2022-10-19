@@ -71,7 +71,7 @@ DECISION ZombieSurprised[] =
 
 DECISION ZombieEvasive[] =
     {
-    {400,   InitActorDuck}, 
+    {400,   InitActorDuck},
     {1024,  NULL}
     };
 
@@ -106,7 +106,7 @@ ATTRIBUTE ZombieAttrib =
     {4, 0, 0, -2},                      // Tic Adjusts
      3,                                 // MaxWeapons;
     {DIGI_NINJAAMBIENT, DIGI_NINJAALERT, DIGI_STAR,
-     DIGI_NINJAPAIN, DIGI_NINJASCREAM,0,0,0,0,0}                
+     DIGI_NINJAPAIN, DIGI_NINJASCREAM,0,0,0,0,0}
     };
 
 
@@ -229,8 +229,8 @@ STATE s_ZombiePain[5][2] =
     {PLAYER_NINJA_STAND_R4 + 0, ZOMBIE_PAIN_RATE, DoZombiePain, &s_ZombiePain[4][1]},
     {PLAYER_NINJA_STAND_R4 + 0, ZOMBIE_PAIN_RATE, DoZombiePain, &s_ZombiePain[4][1]},
     },
-    };    
-    
+    };
+
 STATEp sg_ZombiePain[] =
     {
     s_ZombiePain[0],
@@ -301,8 +301,8 @@ STATEp sg_ZombieNuke[] =
     s_ZombieNuke[3],
     s_ZombieNuke[4]
     };
-    
-    
+
+
 //////////////////////
 //
 // ZOMBIE ROCKET
@@ -418,7 +418,7 @@ STATEp sg_ZombieRail[] =
     s_ZombieRail[3],
     s_ZombieRail[4]
     };
-    
+
 //////////////////////
 //
 // ZOMBIE GRENADE
@@ -476,8 +476,8 @@ STATEp sg_ZombieGrenade[] =
     s_ZombieGrenade[3],
     s_ZombieGrenade[4]
     };
-    
-    
+
+
 //////////////////////
 //
 // ZOMBIE FLASHBOMB
