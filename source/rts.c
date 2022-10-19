@@ -110,7 +110,7 @@ void RTS_AddFile (char *filename)
    header.numlumps = IntelLong(header.numlumps);
    header.infotableofs = IntelLong(header.infotableofs);
    length = header.numlumps*sizeof(filelump_t);
-   fileinfo = alloca (length);
+   fileinfo = malloc(length);
    if (!fileinfo)
       Error ("RTS file could not allocate header info on stack");
    lseek (handle, header.infotableofs, SEEK_SET);
@@ -289,7 +289,7 @@ void *RTS_GetSound (int32 lump)
    if (lumpcache[lump] == NULL)
    {
       lumplockbyte[lump] = CACHE_LOCK_START;
-      allocache((long *)&lumpcache[lump],(long)RTS_SoundLength(lump-1),&lumplockbyte[lump]);
+      allocache((char *)&lumpcache[lump],(long)RTS_SoundLength(lump-1),&lumplockbyte[lump]);
       RTS_ReadLump(lump, lumpcache[lump]);
    }
    else

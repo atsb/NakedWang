@@ -15279,7 +15279,7 @@ InitShotgun(PLAYERp pp)
             SPRITEp hsp = &sprite[hitsprite];
             USERp hu = User[hitsprite];
         
-            if ((hu) && (hu->ID == TRASHCAN))
+            if (hu && hu->ID == TRASHCAN)	// JBF: added null check
                 {
                 extern STATE s_TrashCanPain[];
             
@@ -18085,7 +18085,8 @@ InitUzi(PLAYERp pp)
         USERp hu = User[hitsprite];
         hsp = &sprite[hitsprite];
         
-        if ((hu) && (hu->ID == TRASHCAN))
+	if (hu)	// JBF: added null check
+        if (hu->ID == TRASHCAN)
             {
             extern STATE s_TrashCanPain[];
             
