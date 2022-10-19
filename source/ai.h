@@ -11,7 +11,7 @@ of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 See the GNU General Public License for more details.
 
@@ -29,15 +29,15 @@ Prepared for public release: 03/28/2005 - Charlie Wiederhold, 3D Realms
 #define AI_H
 
 // Call functions based on a random range value
-typedef struct 
-    {
+typedef struct
+{
     short range;
     ANIMATORp action;
-    } DECISION, *DECISIONp;    
+} DECISION, * DECISIONp;
 
 // Personality structure
 struct PERSONALITYstruct
-    {
+{
     DECISIONp Battle;
     DECISIONp Offense;
     DECISIONp Broadcast;
@@ -46,75 +46,75 @@ struct PERSONALITYstruct
     DECISIONp LostTarget;
     DECISIONp CloseRange;
     DECISIONp TouchTarget;
-    };
-    
-enum ActorStates { SLOW_SPEED, NORM_SPEED, MID_SPEED, FAST_SPEED, MAX_SPEED};
+};
+
+enum ActorStates { SLOW_SPEED, NORM_SPEED, MID_SPEED, FAST_SPEED, MAX_SPEED };
 
 #define MAXATTRIBSNDS   11
 typedef enum {
-    attr_ambient, attr_alert, attr_attack, attr_pain, attr_die, 
-    attr_extra1, attr_extra2, attr_extra3,attr_extra4,attr_extra5,
+    attr_ambient, attr_alert, attr_attack, attr_pain, attr_die,
+    attr_extra1, attr_extra2, attr_extra3, attr_extra4, attr_extra5,
     attr_extra6
-} ATTRIB_SNDS;    
+} ATTRIB_SNDS;
 
 struct ATTRIBUTEstruct
-    {
+{
     short Speed[MAX_SPEED];
     CHAR TicAdjust[MAX_SPEED];
     BYTE MaxWeapons;
-    ATTRIB_SNDS Sounds[MAXATTRIBSNDS];
-    };
-    
-extern ATTRIBUTE DefaultAttrib;    
-    
-// AI.C functions
-void __export DebugMoveHit(short SpriteNum);
-BOOL __export ActorMoveHitReact(short SpriteNum);
-BOOL __export ActorFlaming(short SpriteNum);
-void __export DoActorSetSpeed(short SpriteNum,BYTE speed);
-short __export ChooseActionNumber(short decision[]);
-int __export DoActorNoise(ANIMATORp Action,short SpriteNum);
-int __export CanSeePlayer(short SpriteNum);
-int __export CanHitPlayer(short SpriteNum);
-int __export DoActorPickClosePlayer(short SpriteNum);
-int __export CloseRangeDist(SPRITEp sp1,SPRITEp sp2);
-int __export InitActorDecide(short SpriteNum);
-int __export DoActorDecide(short SpriteNum);
-int __export InitActorAlertNoise(short SpriteNum);
-int __export InitActorAmbientNoise(short SpriteNum);
-int __export InitActorAttackNoise(short SpriteNum);
-int __export InitActorPainNoise(short SpriteNum);
-int __export InitActorDieNoise(short SpriteNum);
-int __export InitActorExtra1Noise(short SpriteNum);
-int __export InitActorExtra2Noise(short SpriteNum);
-int __export InitActorExtra3Noise(short SpriteNum);
-int __export InitActorExtra4Noise(short SpriteNum);
-int __export InitActorExtra5Noise(short SpriteNum);
-int __export InitActorExtra6Noise(short SpriteNum);
-int __export InitActorMoveCloser(short SpriteNum);
-int __export DoActorCantMoveCloser(short SpriteNum);
-int __export DoActorMoveCloser(short SpriteNum);
-short __export FindTrackToPlayer(USERp u);
-short __export FindTrackAwayFromPlayer(USERp u);
-short __export FindWanderTrack(USERp u);
-int __export InitActorRunAway(short SpriteNum);
-int __export InitActorRunToward(short SpriteNum);
-int __export InitActorAttack(short SpriteNum);
-int __export DoActorAttack(short SpriteNum);
-int __export InitActorEvade(short SpriteNum);
-int __export InitActorWanderAround(short SpriteNum);
-int __export InitActorFindPlayer(short SpriteNum);
-int __export InitActorDuck(short SpriteNum);
-int __export DoActorDuck(short SpriteNum);
-int __export DoActorMoveJump(short SpriteNum);
-int __export move_scan(short SpriteNum,short ang,long dist,long *stopx,long *stopy,long *stopz,short *stopsect);
-int __export FindNewAngle(short SpriteNum,signed char dir,long DistToMove);
-int __export InitActorReposition(short SpriteNum);
-int __export DoActorReposition(short SpriteNum);
-int __export InitActorPause(short SpriteNum);
-int __export DoActorPause(short SpriteNum);
+    /*ATTRIB_SNDS*/ int Sounds[MAXATTRIBSNDS];	// JBF: ATTRIB_SNDS? Somehow I don't think this is what was intended...
+};
 
-/*    
+extern ATTRIBUTE DefaultAttrib;
+
+// AI.C functions
+void DebugMoveHit(short SpriteNum);
+BOOL ActorMoveHitReact(short SpriteNum);
+BOOL ActorFlaming(short SpriteNum);
+void DoActorSetSpeed(short SpriteNum, BYTE speed);
+short ChooseActionNumber(short decision[]);
+int DoActorNoise(ANIMATORp Action, short SpriteNum);
+int CanSeePlayer(short SpriteNum);
+int CanHitPlayer(short SpriteNum);
+int DoActorPickClosePlayer(short SpriteNum);
+int CloseRangeDist(SPRITEp sp1, SPRITEp sp2);
+int InitActorDecide(short SpriteNum);
+int DoActorDecide(short SpriteNum);
+int InitActorAlertNoise(short SpriteNum);
+int InitActorAmbientNoise(short SpriteNum);
+int InitActorAttackNoise(short SpriteNum);
+int InitActorPainNoise(short SpriteNum);
+int InitActorDieNoise(short SpriteNum);
+int InitActorExtra1Noise(short SpriteNum);
+int InitActorExtra2Noise(short SpriteNum);
+int InitActorExtra3Noise(short SpriteNum);
+int InitActorExtra4Noise(short SpriteNum);
+int InitActorExtra5Noise(short SpriteNum);
+int InitActorExtra6Noise(short SpriteNum);
+int InitActorMoveCloser(short SpriteNum);
+int DoActorCantMoveCloser(short SpriteNum);
+int DoActorMoveCloser(short SpriteNum);
+short FindTrackToPlayer(USERp u);
+short FindTrackAwayFromPlayer(USERp u);
+short FindWanderTrack(USERp u);
+int InitActorRunAway(short SpriteNum);
+int InitActorRunToward(short SpriteNum);
+int InitActorAttack(short SpriteNum);
+int DoActorAttack(short SpriteNum);
+int InitActorEvade(short SpriteNum);
+int InitActorWanderAround(short SpriteNum);
+int InitActorFindPlayer(short SpriteNum);
+int InitActorDuck(short SpriteNum);
+int DoActorDuck(short SpriteNum);
+int DoActorMoveJump(short SpriteNum);
+int move_scan(short SpriteNum, short ang, int dist, int* stopx, int* stopy, int* stopz, short* stopsect);
+int FindNewAngle(short SpriteNum, signed char dir, int DistToMove);
+int InitActorReposition(short SpriteNum);
+int DoActorReposition(short SpriteNum);
+int InitActorPause(short SpriteNum);
+int DoActorPause(short SpriteNum);
+
+/*
 ANIMATOR
 InitActorDecide,
 InitActorMoveCloser,

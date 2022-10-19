@@ -1,0 +1,3 @@
+C:\Users\Ad4m\Downloads\buildengine-main\buildengine-main\ReleaseVC7\Engine.lib
+C:\Users\Ad4m\Downloads\duke3d-main\duke3d-main\source\buildengine\ReleaseVC7\Engine.lib
+C:\Users\Ad4m\Downloads\shadowwarrior-main\shadowwarrior-main\source\buildengine\ReleaseVC7\Engine.lib

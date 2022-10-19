@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{F83AC009-740D-4980-8B9B-E414E8CAE826}</ProjectGuid>
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectName>Sw</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\ReleaseVC7\</OutDir>
+    <IntDir>.\ReleaseVC7\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\DebugVC7\</OutDir>
+    <IntDir>.\DebugVC7\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(ProjectDir)SDL_inc;.\buildengine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;USE_I386_ASM;PLATFORM_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Release/Sw.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Engine.lib;odbc32.lib;odbccp32.lib;sdl.lib;sdl_mixer.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>./ReleaseVC7/Sw.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(ProjectDir)buildengine\ReleaseVC7;$(ProjectDir)x86_SDL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>.\ReleaseVC7/Sw.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Midl>
+      <TypeLibraryName>.\Release/Sw.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)SDL_inc;.\buildengine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;PLATFORM_WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions> /J</AdditionalOptions>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Debug/Sw_d.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Engine.lib;odbc32.lib;odbccp32.lib;sdl.lib;sdl_mixer.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>./DebugVC7/Sw_d.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>$(ProjectDir)buildengine\ReleaseVC7;$(ProjectDir)x86_SDL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\DebugVC7/Sw_d.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <GenerateMapFile>false</GenerateMapFile>
+    </Link>
+    <Midl>
+      <TypeLibraryName>.\Debug/Sw_d.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0000</Culture>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="actor.c" />
+    <ClCompile Include="ai.c" />
+    <ClCompile Include="anim.c" />
+    <ClCompile Include="animlib.c" />
+    <ClCompile Include="audiolib\dsl.c" />
+    <ClCompile Include="audiolib\fx_man.c" />
+    <ClCompile Include="audiolib\ll_man.c" />
+    <ClCompile Include="audiolib\multivoc.c" />
+    <ClCompile Include="audiolib\mvreverb.c" />
+    <ClCompile Include="audiolib\mv_mix.c" />
+    <ClCompile Include="audiolib\nodpmi.c" />
+    <ClCompile Include="audiolib\pitch.c" />
+    <ClCompile Include="audiolib\user.c" />
+    <ClCompile Include="border.c" />
+    <ClCompile Include="break.c" />
+    <ClCompile Include="bunny.c" />
+    <ClCompile Include="cache.c" />
+    <ClCompile Include="cd.c" />
+    <ClCompile Include="cheats.c" />
+    <ClCompile Include="colormap.c" />
+    <ClCompile Include="config.c" />
+    <ClCompile Include="console.c" />
+    <ClCompile Include="control.c" />
+    <ClCompile Include="coolg.c" />
+    <ClCompile Include="coolie.c" />
+    <ClCompile Include="copysect.c" />
+    <ClCompile Include="demo.c" />
+    <ClCompile Include="draw.c" />
+    <ClCompile Include="dukemusc.c" />
+    <ClCompile Include="eel.c" />
+    <ClCompile Include="game.c" />
+    <ClCompile Include="girlninj.c" />
+    <ClCompile Include="global.c" />
+    <ClCompile Include="goro.c" />
+    <ClCompile Include="hornet.c" />
+    <ClCompile Include="interp.c" />
+    <ClCompile Include="interpsh.c" />
+    <ClCompile Include="inv.c" />
+    <ClCompile Include="jplayer.c" />
+    <ClCompile Include="jsector.c" />
+    <ClCompile Include="jweapon.c" />
+    <ClCompile Include="kbd.c" />
+    <ClCompile Include="keyboard.c" />
+    <ClCompile Include="lava.c" />
+    <ClCompile Include="light.c" />
+    <ClCompile Include="mclip.c" />
+    <ClCompile Include="mdastr.c" />
+    <ClCompile Include="menus.c" />
+    <ClCompile Include="miscactr.c" />
+    <ClCompile Include="morph.c" />
+    <ClCompile Include="net.c" />
+    <ClCompile Include="ninja.c" />
+    <ClCompile Include="panel.c" />
+    <ClCompile Include="pcx.c" />
+    <ClCompile Include="player.c" />
+    <ClCompile Include="predict.c" />
+    <ClCompile Include="quake.c" />
+    <ClCompile Include="ripper.c" />
+    <ClCompile Include="ripper2.c" />
+    <ClCompile Include="rooms.c" />
+    <ClCompile Include="rotator.c" />
+    <ClCompile Include="rts.c" />
+    <ClCompile Include="save.c" />
+    <ClCompile Include="scrip2.c" />
+    <ClCompile Include="scriplib.c" />
+    <ClCompile Include="sector.c" />
+    <ClCompile Include="serp.c" />
+    <ClCompile Include="setup.c" />
+    <ClCompile Include="skel.c" />
+    <ClCompile Include="skull.c" />
+    <ClCompile Include="slidor.c" />
+    <ClCompile Include="sounds.c" />
+    <ClCompile Include="spike.c" />
+    <ClCompile Include="sprite.c" />
+    <ClCompile Include="sumo.c" />
+    <ClCompile Include="swconfig.c" />
+    <ClCompile Include="symutil.c" />
+    <ClCompile Include="sync.c" />
+    <ClCompile Include="text.c" />
+    <ClCompile Include="timer.c" />
+    <ClCompile Include="track.c" />
+    <ClCompile Include="usrhooks.c" />
+    <ClCompile Include="vator.c" />
+    <ClCompile Include="vis.c" />
+    <ClCompile Include="wallmove.c" />
+    <ClCompile Include="warp.c" />
+    <ClCompile Include="weapon.c" />
+    <ClCompile Include="zilla.c" />
+    <ClCompile Include="zombie.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ai.h" />
+    <ClInclude Include="ambient.h" />
+    <ClInclude Include="anim.h" />
+    <ClInclude Include="animlib.h" />
+    <ClInclude Include="animlib2.h" />
+    <ClInclude Include="audiofx.h" />
+    <ClInclude Include="audiolib\fx_man.h" />
+    <ClInclude Include="bots.h" />
+    <ClInclude Include="break.h" />
+    <ClInclude Include="cache.h" />
+    <ClInclude Include="common.h" />
+    <ClInclude Include="condef.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="conpic.h" />
+    <ClInclude Include="control.h" />
+    <ClInclude Include="damage.h" />
+    <ClInclude Include="def.h" />
+    <ClInclude Include="demo.h" />
+    <ClInclude Include="develop.h" />
+    <ClInclude Include="digi.h" />
+    <ClInclude Include="file_lib.h" />
+    <ClInclude Include="function.h" />
+    <ClInclude Include="fx_man.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="gamedefs.h" />
+    <ClInclude Include="interp.h" />
+    <ClInclude Include="inv.h" />
+    <ClInclude Include="jnames.h" />
+    <ClInclude Include="joystick.h" />
+    <ClInclude Include="jsector.h" />
+    <ClInclude Include="jtags.h" />
+    <ClInclude Include="kbd.h" />
+    <ClInclude Include="keyboard.h" />
+    <ClInclude Include="keys.h" />
+    <ClInclude Include="light.h" />
+    <ClInclude Include="lists.h" />
+    <ClInclude Include="mathutil.h" />
+    <ClInclude Include="mclip.h" />
+    <ClInclude Include="menus.h" />
+    <ClInclude Include="mfile.h" />
+    <ClInclude Include="mouse.h" />
+    <ClInclude Include="music.h" />
+    <ClInclude Include="mytypes.h" />
+    <ClInclude Include="names.h" />
+    <ClInclude Include="names2.h" />
+    <ClInclude Include="net.h" />
+    <ClInclude Include="ninja.h" />
+    <ClInclude Include="pal.h" />
+    <ClInclude Include="panel.h" />
+    <ClInclude Include="parent.h" />
+    <ClInclude Include="parse.h" />
+    <ClInclude Include="pcx.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="proto.h" />
+    <ClInclude Include="quake.h" />
+    <ClInclude Include="reserve.h" />
+    <ClInclude Include="rts.h" />
+    <ClInclude Include="savedef.h" />
+    <ClInclude Include="scriplib.h" />
+    <ClInclude Include="sector.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="shadow.h" />
+    <ClInclude Include="slidor.h" />
+    <ClInclude Include="sndcards.h" />
+    <ClInclude Include="sounds.h" />
+    <ClInclude Include="sprite.h" />
+    <ClInclude Include="stag.h" />
+    <ClInclude Include="swunix.h" />
+    <ClInclude Include="swwin.h" />
+    <ClInclude Include="sw_strs.h" />
+    <ClInclude Include="symutil.h" />
+    <ClInclude Include="tags.h" />
+    <ClInclude Include="task_man.h" />
+    <ClInclude Include="text.h" />
+    <ClInclude Include="trigger.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="usrhooks.h" />
+    <ClInclude Include="util_lib.h" />
+    <ClInclude Include="ves2.h" />
+    <ClInclude Include="vis.h" />
+    <ClInclude Include="warp.h" />
+    <ClInclude Include="weapon.h" />
+    <ClInclude Include="_config.h" />
+    <ClInclude Include="_functio.h" />
+    <ClInclude Include="_rts.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -6585,14 +6585,14 @@ AdjustActiveRange(PLAYERp pp, short SpriteNum, long dist)
                 ASSERT(u);                                                          \
                                                                                     \
                 if (!(u))                                                           \
-                    break;                                                          \          
+                    break;                                                          \
                                                                                     \
                 if (TEST((u)->State->Tics, SF_QUICK_CALL))                          \
                     (u)->State = (u)->State->NextState;                             \
                 }                                                                   \
                                                                                     \
             if (!(u))                                                               \
-                break;                                                              \          
+                break;                                                              \
                                                                                     \
             if (!(u)->State->Pic)                                                   \
                 {                                                                   \
@@ -6618,109 +6618,7 @@ AdjustActiveRange(PLAYERp pp, short SpriteNum, long dist)
             if ((u)->State->Animator && (u)->State->Animator != NullAnimator)       \
                 (*(u)->State->Animator) ((SpriteNum));                              \
             }                                                                       \
-        }                                                                           
-
-
-/*
-
-  !AIC KEY - Reads state tables for animation frame transitions and handles
-  calling animators, QUICK_CALLS, etc.  This is handled for many types of
-  sprites not just actors.
-  
-*/    
-    
-int
-StateControl(SHORT SpriteNum)
-    {
-    USERp u = User[SpriteNum];
-    SPRITEp sp = &sprite[SpriteNum];
-    short StateTics;
-
-    if (!u->State)
-        {
-        ASSERT(u->ActorActionFunc);
-        (u->ActorActionFunc)(SpriteNum);
-        return(0);
         }
-
-    if (sp->statnum >= STAT_SKIP4_START && sp->statnum <= STAT_SKIP4_END)
-        u->Tics += ACTORMOVETICS * 2;
-    else    
-        u->Tics += ACTORMOVETICS;
-
-    // Skip states if too much time has passed
-    while (u->Tics >= TEST(u->State->Tics, SF_TICS_MASK))
-        {
-        StateTics = TEST(u->State->Tics, SF_TICS_MASK);
-
-        if (TEST(u->State->Tics, SF_TIC_ADJUST))
-            {
-            ASSERT(u->Attrib);
-            ASSERT(u->speed < MAX_SPEED);
-            ASSERT(StateTics > -u->Attrib->TicAdjust[u->speed]);
-
-            StateTics += u->Attrib->TicAdjust[u->speed];
-            }
-
-        // Set Tics
-        u->Tics -= StateTics;
-
-        // Transition to the next state
-        u->State = u->State->NextState;
-
-        // Look for flags embedded into the Tics variable
-        while (TEST(u->State->Tics, SF_QUICK_CALL))
-            {
-            // Call it once and go to the next state
-            (*u->State->Animator) (SpriteNum);
-            
-            ASSERT(u); //put this in to see if actor was getting killed with in his QUICK_CALL state
-            
-            if (!u)
-                break;
-
-            // if still on the same QUICK_CALL should you
-            // go to the next state.
-            if (TEST(u->State->Tics, SF_QUICK_CALL))
-                u->State = u->State->NextState;
-            }
-
-        if (!u)    
-            break;
-            
-        if (!u->State->Pic)
-            {
-            NewStateGroup(SpriteNum, (STATEp *) u->State->NextState);
-            }
-        }
-
-    if (u)
-        {
-        ASSERT(u->State);
-        ASSERT(ValidPtr(u));
-        // Set picnum to the correct pic
-        if (TEST(u->State->Tics, SF_WALL_STATE))
-            {
-            ASSERT(u->WallP);
-            u->WallP->picnum = u->State->Pic;
-            }
-        else
-            {
-            //u->SpriteP->picnum = u->State->Pic;
-            if (u->RotNum > 1)
-                sp->picnum = u->Rot[0]->Pic;
-            else    
-                sp->picnum = u->State->Pic;
-            }    
-
-        // Call the correct animator
-        if (u->State->Animator && u->State->Animator != NullAnimator)
-            (*u->State->Animator) (SpriteNum);
-        }    
-
-    return (0);
-    }
-
 
     
 VOID

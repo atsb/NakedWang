@@ -1,0 +1,14 @@
+﻿  a_visualc.c
+  cache1d.c
+  engine.c
+  mmulti.c
+C:\Users\Ad4m\Downloads\shadowwarrior-main\shadowwarrior-main\source\buildengine\mmulti.c(538,1): warning C4005: 'EAGAIN': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\errno.h(49): message : see previous definition of 'EAGAIN'
+C:\Users\Ad4m\Downloads\shadowwarrior-main\shadowwarrior-main\source\buildengine\mmulti.c(539,1): warning C4005: 'EWOULDBLOCK': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\errno.h(129): message : see previous definition of 'EWOULDBLOCK'
+C:\Users\Ad4m\Downloads\shadowwarrior-main\shadowwarrior-main\source\buildengine\mmulti.c(540,1): warning C4005: 'ECONNREFUSED': macro redefinition
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\errno.h(96): message : see previous definition of 'ECONNREFUSED'
+  pragmas.c
+  sdl_driver.c
+  Generating Code...
+  Engine.vcxproj -> C:\Users\Ad4m\Downloads\shadowwarrior-main\shadowwarrior-main\source\buildengine\ReleaseVC7\Engine.lib

@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{42a336a5-e8e8-4ad0-b015-8f8977591735}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{02f33996-87b4-413d-9fd9-90393187d788}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{5a46dd98-f20a-49bb-9aa5-57eedf85f1d7}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="actor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ai.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="anim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="animlib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="border.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="break.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bunny.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cache.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="colormap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="console.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="control.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coolg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="coolie.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="copysect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="demo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="draw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dukemusc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="eel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="game.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="girlninj.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="global.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="goro.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hornet.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cheats.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interpsh.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jplayer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jsector.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jweapon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kbd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboard.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lava.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="light.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mclip.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mdastr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="menus.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="miscactr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="morph.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="net.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ninja.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="panel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pcx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="player.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="predict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quake.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ripper.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ripper2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rooms.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rotator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rts.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="save.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scrip2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="scriplib.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sector.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="serp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="setup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="skel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="skull.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="slidor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sounds.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="spike.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sumo.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="swconfig.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="symutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sync.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="text.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="track.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="usrhooks.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vator.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vis.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="wallmove.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="warp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="weapon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zilla.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="zombie.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\fx_man.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\ll_man.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\multivoc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\mv_mix.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\mvreverb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\nodpmi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\pitch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\user.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="audiolib\dsl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_functio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_rts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ai.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ambient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="anim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="animlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="animlib2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audiofx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bots.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="break.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="condef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="conpic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="damage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="def.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="demo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="develop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="digi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file_lib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fx_man.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gamedefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="interp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jnames.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jsector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jtags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kbd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="light.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lists.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mathutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mclip.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="music.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mytypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="names.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="names2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="net.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ninja.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="panel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pcx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="proto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="quake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="reserve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="savedef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="scriplib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shadow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="slidor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sndcards.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sounds.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sw_strs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="swunix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="swwin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="symutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="task_man.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="trigger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usrhooks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util_lib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ves2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="warp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="weapon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="audiolib\fx_man.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

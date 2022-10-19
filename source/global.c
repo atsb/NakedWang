@@ -771,7 +771,7 @@ int dukescreencapture(char *str, char inverseit)
     char *path = alloca(slen);
     strcpy(path, ApogeePath);
     strcat(path, SCREENSHOTDIR);
-	mkdir(path, S_IRWXU);
+    mkdir(path, "screenshot");
     strcat(path, PATH_SEP_STR);
     strcat(path, str);
     str = path;

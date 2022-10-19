@@ -1,0 +1,15 @@
+
+*.vsidx
+*.lock
+*.bin
+*.db
+*.ipch
+*.obj
+*.idb
+*.pdb
+*.sbr
+*.bsc
+*.lib
+*.recipe
+*.tlog
+*.user
