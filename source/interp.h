@@ -11,7 +11,7 @@ of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 See the GNU General Public License for more details.
 
@@ -28,12 +28,16 @@ Prepared for public release: 03/28/2005 - Charlie Wiederhold, 3D Realms
 extern short short_numinterpolations, short_startofdynamicinterpolations;
 extern short short_oldipos[SHORT_MAXINTERPOLATIONS];
 extern short short_bakipos[SHORT_MAXINTERPOLATIONS];
-extern short *short_curipos[SHORT_MAXINTERPOLATIONS];
+extern short* short_curipos[SHORT_MAXINTERPOLATIONS];
 
 #define MAXINTERPOLATIONS 1024
 extern long numinterpolations, startofdynamicinterpolations;
 extern long oldipos[MAXINTERPOLATIONS];
 extern long bakipos[MAXINTERPOLATIONS];
-extern long *curipos[MAXINTERPOLATIONS];
+extern long* curipos[MAXINTERPOLATIONS];
 
-
+void setinterpolation(long* posptr);
+void stopinterpolation(long* posptr);
+void updateinterpolations(void);
+void dointerpolations(long smoothratio);
+void restoreinterpolations(void);

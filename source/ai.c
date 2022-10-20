@@ -1602,7 +1602,7 @@ DoActorAttack(short SpriteNum)
     STUBBED("Verify order of operations for added parentheses.");
     if (((u->ActorActionSet->CloseAttack[0]) &&
         (dist < CloseRangeDist(sp, u->tgt_sp))) ||
-        (pu->WeaponNum == WPN_FIST))
+        (pu && pu->WeaponNum == WPN_FIST))	// JBF: added null check
         {
         rand_num = ChooseActionNumber(u->ActorActionSet->CloseAttackPercent);
             
@@ -1787,7 +1787,7 @@ DoActorMoveJump(short SpriteNum)
     }
 
 
-int move_scan(short SpriteNum, short ang, long dist, long *stopx, long *stopy, long *stopz, short *stopsect)
+int move_scan(short SpriteNum, short ang, long dist, long* stopx, long* stopy, long* stopz, short* stopsect)
     {
     USERp u = User[SpriteNum];
     SPRITEp sp = User[SpriteNum]->SpriteP;
