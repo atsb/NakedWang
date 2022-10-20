@@ -1242,7 +1242,6 @@ void MusicStartup( void )
    // if they chose None lets return
    if (MusicDevice == NumSoundCards)
         {
-        gs.MusicOn = FALSE;
         return;
         }
 
@@ -1259,7 +1258,7 @@ void MusicStartup( void )
       int MaxBits;
       int MaxChannels;
 
-      status = FX_SetupSoundBlaster
+      FX_SetupSoundBlaster
                   (
                   BlasterConfig, (int *)&MaxVoices, (int *)&MaxBits, (int *)&MaxChannels
                   );

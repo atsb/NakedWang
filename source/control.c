@@ -224,22 +224,23 @@ void CONTROL_ClearAssignments( void )
 
 void CONTROL_GetUserInput( UserInput *info )
 {
-    info->button0 = info->button1 = FALSE;
+    info->button0 = FALSE;
+    info->button1 = FALSE;
     info->dir = dir_None;
 
     int x = 0;
     int y = 0;
 
-    if (KB_KeyDown[KeyMapping[gamefunc_Fire].key1])
+    if (KB_KeyPressed(sc_Return))
     {
         info->button0 = TRUE;
-        KB_KeyDown[KeyMapping[gamefunc_Fire].key1] = FALSE;
+        KB_KeyDown[KeyMapping[sc_Return].key1] = FALSE;
     }
 
-    if (KB_KeyDown[KeyMapping[gamefunc_Fire].key2])
+    if (KB_KeyPressed(sc_Escape))
     {
-        info->button0 = TRUE;
-        KB_KeyDown[KeyMapping[gamefunc_Fire].key2] = FALSE;
+        info->button1 = TRUE;
+        KB_KeyDown[KeyMapping[sc_Escape].key2] = FALSE;
     }
 
     if (KB_KeyDown[KeyMapping[gamefunc_Move_Forward].key1])

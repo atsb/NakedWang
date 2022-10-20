@@ -427,7 +427,7 @@ void CONFIG_SetupMouse( int32 scripthandle )
    // 0 to 65536  
    SCRIPT_GetNumber( scripthandle, "Controls","MouseSensitivity",&function);
    gs.MouseSpeed = function;
-   CONTROL_SetMouseSensitivity(function<<2);
+   CONTROL_SetMouseSensitivity(function);
    }
 
 /*
